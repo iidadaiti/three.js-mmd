@@ -1,0 +1,40 @@
+{
+  "name": "genshin-mmd",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf public/index.html public/index.js",
+    "lint": "eslint .",
+    "format": "prettier -w .",
+    "bundle": "rollup -c",
+    "dev": "npm run bundle -- -w -m inline --environment BUILD:development",
+    "build": "npm run format && npm run lint && npm run clean && npm run bundle"
+  },
+  "keywords": [],
+  "author": "iida daiti <iidadaiti.yattaki@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-html": "^0.2.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-typescript": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "html-minifier": "^4.0.0",
+    "prettier": "^2.1.2",
+    "rimraf": "^2.6.3",
+    "rollup": "^2.33.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "three": "^0.122.0"
+  }
+}
